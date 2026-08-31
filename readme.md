@@ -12,6 +12,8 @@ Sesuai Buku Panduan 2024
 
 - cover pake font = Trebuchet MS
 - logo ITS sudah sesuai
+- penulisan cititasi
+- penulisan daftar pustaka, mirip APA, tapi perlu di modif biar plek ketiplek sama panduan
 
 Yang belum (tapi koyok e gak semua pake) :
 
