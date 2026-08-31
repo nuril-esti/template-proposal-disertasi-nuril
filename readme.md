@@ -12,3 +12,8 @@ Sesuai Buku Panduan 2024
 
 - cover pake font = Trebuchet MS
 - logo ITS sudah sesuai
+
+Yang belum (tapi koyok e gak semua pake) :
+
+- daftar Notasi
+- daftar Singkatan
