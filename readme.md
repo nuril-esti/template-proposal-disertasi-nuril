@@ -1,4 +1,4 @@
-coba bikin dewe
+coba bikin dewe : by Nuril Esti
 
 - compile pake LUATEX
 - perlu instal font Times New Roman klo belum ada di laptop
