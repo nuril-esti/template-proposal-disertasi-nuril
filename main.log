@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.10.18)  31 AUG 2026 10:13
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.10.18)  31 AUG 2026 10:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1142,9 +1142,53 @@ File: gambar/logo_ITS.jpg Graphic file (type bmp)
 <gambar/logo_ITS.jpg>
 
 
-[1]) (./isinya/1-umum/halaman-kosong.tex) (./isinya/2-proposal/abstrak.tex
+[1]) (./isinya/1-umum/halaman-kosong.tex) (./isinya/2-proposal/lembar-pengesahan-proposal.tex
 
 [2
+
+]
+Overfull \hbox (1.99997pt too wide) in paragraph at lines 19--26
+ [] 
+ []
+
+
+Overfull \hbox (1.99997pt too wide) in paragraph at lines 36--43
+ [] 
+ []
+
+
+Overfull \hbox (3.30954pt too wide) in paragraph at lines 70--70
+[]|\TU/TimesNewRoman(0)/m/n/12 1.|  
+ []
+
+
+Overfull \hbox (3.30954pt too wide) in paragraph at lines 72--72
+[]|\TU/TimesNewRoman(0)/m/n/12 1.|  
+ []
+
+
+Overfull \hbox (3.30954pt too wide) in paragraph at lines 82--82
+[]|\TU/TimesNewRoman(0)/m/n/12 2.|  
+ []
+
+
+Overfull \hbox (3.30954pt too wide) in paragraph at lines 84--84
+[]|\TU/TimesNewRoman(0)/m/n/12 2.|  
+ []
+
+
+Overfull \hbox (35.38089pt too wide) in paragraph at lines 55--94
+[][] 
+ []
+
+
+
+[3
+
+]) (./isinya/1-umum/halaman-kosong.tex) (./isinya/2-proposal/abstrak.tex
+
+[4
+
 
 ]
 Overfull \hbox (58.90503pt too wide) in paragraph at lines 21--28
@@ -1153,11 +1197,11 @@ Overfull \hbox (58.90503pt too wide) in paragraph at lines 21--28
 
 
 
-[3
+[5
 
 ]) (./isinya/1-umum/halaman-kosong.tex) (./isinya/2-proposal/abstrak-EN.tex
 
-[4
+[6
 
 
 ]
@@ -1167,11 +1211,11 @@ Overfull \hbox (56.06001pt too wide) in paragraph at lines 21--28
 
 
 
-[5
+[7
 
 ]) (./isinya/1-umum/halaman-kosong.tex) (./isinya/1-umum/daftar-isi.tex
 
-[6
+[8
 
 
 ] (./main.toc
@@ -1179,7 +1223,7 @@ Underfull \vbox (badness 2478) has occurred while \output is active []
 
 
 
-[7
+[9
 
 ])
 \tf@toc=\write6
@@ -1187,18 +1231,18 @@ Underfull \vbox (badness 2478) has occurred while \output is active []
 
 
 
-[8]) (./isinya/1-umum/daftar-gambar.tex (./main.lof)
+[10]) (./isinya/1-umum/daftar-gambar.tex (./main.lof)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
 
 
-[9
+[11
 
 
 ]) (./isinya/1-umum/halaman-kosong.tex) (./isinya/1-umum/daftar-tabel.tex
 
-[10
+[12
 
 
 ] (./main.lot)
@@ -1207,11 +1251,11 @@ Underfull \vbox (badness 2478) has occurred while \output is active []
 
 
 
-[11
+[13
 
 ]) (./isinya/1-umum/halaman-kosong.tex)
 
-[12
+[14
 
 
 ] (./isinya/2-proposal/bab1.tex
@@ -1344,19 +1388,25 @@ L3 programming layer <2025-01-18>
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8C42C0F0EB728779AD4BA7973BA54BD9;6532.
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 8C42C0F0EB728779AD4BA7973BA54BD9;6532
+(rerunfilecheck)             After:  F66093959292A1E5547F628C155098F9;6667.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38849 strings out of 473832
- 762399 string characters out of 5729480
- 1729745 words of memory out of 5000000
- 61347 multiletter control sequences out of 15000+600000
+ 38859 strings out of 473832
+ 762871 string characters out of 5729480
+ 1730745 words of memory out of 5000000
+ 61352 multiletter control sequences out of 15000+600000
  560575 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  107i,10n,110p,753b,4961s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (32 pages).
+Output written on main.pdf (34 pages).
