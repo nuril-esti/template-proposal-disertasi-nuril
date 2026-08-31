@@ -17,3 +17,5 @@ Yang belum (tapi koyok e gak semua pake) :
 
 - daftar Notasi
 - daftar Singkatan
+
+Bisa jalan di Run Offline, udah nyoba di Overleaf gak bisa, krn font Trebuchet MS gak ada di Overleaf
