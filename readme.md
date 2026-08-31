@@ -5,6 +5,10 @@ coba bikin dewe
 - perlu instal font Trebuchet MS klo belum ada di laptop
 
 - untuk font MATH template ini pake = texgyretermes-math
-  <!-- 1. Cek apakah font-nya ada -->
-  <!-- Di Terminal macos jalankan: -->
-  <!-- kpsewhich texgyretermes-math.otf -->
+- Cek apakah font-nya ada, klo di Terminal macos jalankan:
+- kpsewhich texgyretermes-math.otf
+
+Sesuai Buku Panduan 2024
+
+- cover pake font = Trebuchet MS
+- logo ITS sudah sesuai
