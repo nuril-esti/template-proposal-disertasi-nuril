@@ -1,0 +1,612 @@
+%% ============================================================================
+%% preamble adalah bagian pengaturan dokumen yang ditulis sebelum \begin{document}.
+%% ============================================================================
+
+% ------------------------------------------------------------
+% UKURAN KERTAS / MARGIN UNTUK PRINT BOLAK-BALIK
+% inner  = sisi jilid
+% outer  = sisi luar
+% ------------------------------------------------------------
+\usepackage[
+  a4paper,
+  twoside,
+  inner=4cm,
+  outer=3cm,
+  top=3.5cm,
+  bottom=3cm,
+  bindingoffset=0cm
+]{geometry}
+
+% pada main pake settingan ini yaa...
+% \documentclass[12pt,a4paper,twoside,openright,fleqn]{report}
+% - twoside: Cetak bolak-balik (dua sisi)
+% - openright: Bab baru dimulai di halaman ganjil
+% - fleqn: opsi LaTeX untuk membuat persamaan matematika rata kiri, bukan berada di tengah halaman.
+
+\usepackage{array}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{enumitem}
+
+% bahasa dokumen
+\usepackage[indonesian]{babel}
+\usepackage{csquotes}
+
+% butuh ini karena cover pake font Trebuchet MS
+\usepackage{fontspec}
+% Untuk proposal disertasimu yang membutuhkan font seperti Trebuchet MS dan Times New Roman, 
+% saya justru menyarankan memakai XeLaTeX + fontspec, karena bisa menggunakan font sistem secara langsung.
+
+\usepackage{setspace}
+\onehalfspacing % Mengaktifkan 1,5 spasi, akan membuat hampir seluruh isi dokumen menggunakan jarak 1,5 spasi.
+
+% --------------------------------------------------
+% BAHASA
+% --------------------------------------------------
+\usepackage[indonesian]{babel}
+\usepackage{csquotes}
+\usepackage{csquotes}
+\DeclareQuoteAlias{english}{indonesian}
+
+% --------------------------------------------------
+% SETTING COVER SAMPUL
+% --------------------------------------------------
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+% ---------------------------------------------------------
+% Font khusus cover
+% ---------------------------------------------------------
+\newfontfamily\CoverFont{Trebuchet MS}
+
+% --------------------------------------------------
+% DAFTAR PUSTAKA
+% --------------------------------------------------
+\usepackage[
+    backend=biber,
+    style=authoryear,
+    sorting=nyt,
+    giveninits=true,
+    uniquename=init,
+    maxcitenames=2,
+    mincitenames=1,
+    maxbibnames=99
+]{biblatex}
+
+% Karena biblatex belum punya localization Indonesian bawaan
+\DeclareLanguageMapping{indonesian}{english}
+
+\addbibresource{isinya/1-umum/referensi.bib}
+
+% --------------------------------------------------
+% DAFTAR PUSTAKA - JOURNAL
+% --------------------------------------------------
+
+% Format: (Nama, Tahun)
+\DeclareDelimFormat{nameyeardelim}{\addcomma\space}
+
+% PENTING: definisikan untuk bahasa INDONESIAN, bukan english
+\DefineBibliographyStrings{indonesian}{
+    andothers = {dkk\adddot}
+}
+
+% Nama daftar pustaka: Neuman, S.P.
+\DeclareNameAlias{sortname}{family-given}
+
+% Tidak menampilkan "In:" sebelum jurnal
+\renewbibmacro{in:}{}
+
+% Judul artikel dengan tanda kutip
+\DeclareFieldFormat[article]{title}{\mkbibquote{#1}}
+
+% Format volume, nomor, halaman
+\DeclareFieldFormat[article]{volume}{Vol\adddot\space#1}
+\DeclareFieldFormat[article]{number}{No\adddot\space#1}
+\DeclareFieldFormat[article]{pages}{hal\adddot\space#1}
+
+
+% ==================================================
+% FORMAT DAFTAR PUSTAKA - BOOK
+% ==================================================
+
+% Inisial tanpa spasi: D.K. bukan D. K.
+\renewcommand*{\bibinitdelim}{}
+
+% Nama: Todd, D.K.
+\DeclareNameAlias{author}{family-given}
+
+% Gunakan "dan", bukan "and"
+\DeclareDelimFormat{finalnamedelim}{%
+  \ifnumgreater{\value{liststop}}{2}{\finalandcomma}{}%
+  \addspace dan\space}
+
+% Edition: 3 -> 3rd
+\DeclareFieldFormat{edition}{%
+  \ifinteger{#1}
+    {\mkbibordinal{#1}}
+    {#1}}
+
+% Format buku
+\DeclareBibliographyDriver{book}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \printnames{author}%
+  \setunit{\addcomma\space}%
+  \printtext[parens]{\printfield{year}}%
+  \setunit{\addcomma\space}%
+  \printfield[title]{title}%
+  \setunit{\addcomma\space}%
+  \iffieldundef{volume}
+    {}
+    {\printfield{volume}%
+     \setunit{\addcomma\space}}%
+  \iffieldundef{edition}
+    {}
+    {\printfield{edition}%
+     \addspace edition%
+     \setunit{\addcomma\space}}%
+  \printlist{publisher}%
+  \setunit{\addcomma\space}%
+  \printlist{location}%
+  \usebibmacro{finentry}%
+}
+
+
+% ==================================================
+% INPROCEEDINGS
+%
+% Neuman, S.P. (1980), “Judul”,
+% Proceedings ..., Eds: Wang, S.Y. et al.,
+% University of Mississippi, Mississippi,
+% hal. 189–215.
+% ==================================================
+
+\DeclareFieldFormat[inproceedings]{title}{%
+  \mkbibquote{#1}}
+
+\DeclareFieldFormat[inproceedings]{booktitle}{%
+  \mkbibemph{#1}}
+
+\DeclareFieldFormat[inproceedings]{pages}{#1}
+
+\DeclareNameFormat{proc-editor}{%
+  \nameparts{#1}%
+  \usebibmacro{name:family-given}
+    {\namepartfamily}
+    {\namepartgiveni}
+    {\namepartprefix}
+    {\namepartsuffix}%
+  \ifboolexpr{
+    test {\ifnumequal{\value{listcount}}{\value{liststop}}}
+    and
+    test \ifmorenames
+  }
+    {\addspace et\addabbrvspace al\adddot}
+    {}%
+}
+
+\DeclareBibliographyDriver{inproceedings}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \printnames{author}%
+  \setunit{\addspace}%
+  \printtext[parens]{\printfield{year}}%
+  \setunit{\addcomma\space}%
+  \printfield{title}%
+  \setunit{\addcomma\space}%
+  \printfield{booktitle}%
+  \setunit{\addcomma\space}%
+  \ifnameundef{editor}
+    {}
+    {%
+      \ifboolexpr{
+        test {\ifnumgreater{\value{editor}}{1}}
+        or
+        test {\ifandothers{editor}}
+      }
+        {\printtext{Eds:\space}}
+        {\printtext{Ed:\space}}%
+      \printnames[proc-editor]{editor}%
+      \setunit{\addcomma\space}%
+    }%
+  \printlist{organization}%
+  \setunit{\addcomma\space}%
+  \printlist{location}%
+  \setunit{\addcomma\space}%
+  \printtext{hal.\addspace}%
+  \printfield{pages}%
+  \usebibmacro{finentry}%
+}
+% ==================================================
+% FORMAT NAMA EDITOR KHUSUS PROSIDING
+% Wang, S.Y. et al.
+% ==================================================
+
+\DeclareNameFormat{proc-editor}{%
+  \nameparts{#1}%
+  \usebibmacro{name:family-given}
+    {\namepartfamily}
+    {\namepartgiveni}
+    {\namepartprefix}
+    {\namepartsuffix}%
+  \ifboolexpr{
+    test {\ifnumequal{\value{listcount}}{\value{liststop}}}
+    and
+    test \ifmorenames
+  }
+    {\addspace et\addabbrvspace al\adddot}
+    {}%
+}
+
+% ==================================================
+% GAMBAR
+% ==================================================
+
+\usepackage{graphicx}
+\usepackage{caption}
+
+% Nama caption
+\renewcommand{\figurename}{Gambar}
+
+\graphicspath{{gambar/}} % memberi tahu LaTeX bahwa file gambar secara default dicari di folder ini
+
+\AtBeginDocument{
+    % Jarak teks dengan gambar yang berada di tengah halaman
+    \setlength{\intextsep}{1\baselineskip}
+    
+    % Jarak teks dengan gambar yang berada di atas/bawah halaman
+    \setlength{\textfloatsep}{0pt}
+
+    % Jarak vertikal antara dua float (gambar/tabel) yang berurutan
+    \setlength{\floatsep}{-1\baselineskip}
+
+    % Kalau yang ingin kamu atur adalah jarak setelah caption, gunakan:
+    \setlength{\belowcaptionskip}{0\baselineskip}
+
+    % dan kalau ingin mengatur jarak gambar → caption:
+    \setlength{\abovecaptionskip}{1\baselineskip}
+}
+
+% Format caption gambar
+\captionsetup[figure]{
+    position=below,
+    justification=raggedright,
+    singlelinecheck=false,
+    font=normalsize,
+    labelfont=normalfont,
+    textfont=normalfont,
+    labelsep=space
+}
+% ==================================================
+% TABEL
+% ==================================================
+\captionsetup[table]{
+    position=top,
+    skip=0.7\baselineskip
+}
+
+
+\usepackage{indentfirst} % membuat paragraf pertama setelah judul bab atau subbab ikut menjorok ke dalam.
+\setlength\parindent{1.5cm} % mengatur indentasi awal setiap paragraf sebesar 1.5 cm sesuai pedoman
+\setlength{\parskip}{0pt} % mengatur tidak ada tambahan jarak vertikal antarparagraf.
+
+% ==================================================
+% FONT
+% ==================================================
+% Jika menggunakan XeLaTeX
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+% ==================================================
+% MATEMATIKA
+% ==================================================
+% 1. Cek apakah font-nya ada
+% Di Terminal jalankan:
+% kpsewhich texgyretermes-math.otf
+
+\usepackage{unicode-math}
+% \setmathfont{TeX Gyre Termes Math}
+\setmathfont{texgyretermes-math.otf}
+% Ini lebih cocok daripada Cambria Math karena teks utama kampus Anda menggunakan Times New Roman. 
+% TeX Gyre Termes Math secara visual jauh lebih menyatu dengan Times New Roman
+
+\DeclareMathSizes{12}{12}{7}{5}
+% Ukuran rumus sesuai pedoman kampus:
+% Full = 12 pt
+% Subscript/Superscript = 7 pt
+% Sub-subscript/Superscript = 5 pt
+
+\usepackage{amsmath}
+
+\numberwithin{equation}{chapter}
+
+% Rumus rata kiri
+\setlength{\mathindent}{2pt}
+
+% ==================================================
+% JARAK RUMUS
+% ==================================================
+
+\makeatletter
+\g@addto@macro\normalsize{%
+    \setlength{\abovedisplayskip}{0pt}%
+    \setlength{\belowdisplayskip}{15pt}%
+    \setlength{\abovedisplayshortskip}{0pt}%
+    \setlength{\belowdisplayshortskip}{15pt}%
+}
+\makeatother
+\normalsize
+
+% Kemudian Anda cukup menulis:
+% \begin{equation}
+%     Dice = \frac{2TP}{2TP + FP + FN}
+%     \label{eq:dice}
+% \end{equation}
+% dengan rumus di kiri dan nomor di kanan.
+% Untuk merujuknya:
+% Persamaan~\eqref{eq:dice}
+
+% ==================================================
+% SOURCE CODE / LISTING
+% ==================================================
+\usepackage{listings}
+% Nama caption
+\renewcommand{\lstlistingname}{Kode}
+% Judul daftar kode
+\renewcommand{\lstlistlistingname}{Daftar Kode}
+
+% ==================================================
+% HIRARKI PENOMORAN BAB DAN SUBBAB
+% ==================================================
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+% menentukan sampai mana diberi nomor
+\setcounter{secnumdepth}{3}
+% menentukan sampai mana muncul di Daftar Isi.
+\setcounter{tocdepth}{3}
+
+
+% ==================================================
+% DAFTAR ISI, DAFTAR GAMBAR, DAFTAR TABEL
+% ==================================================
+
+\usepackage{tocloft}
+
+% --------------------------------------------------
+% NAMA JUDUL
+% --------------------------------------------------
+
+\renewcommand{\contentsname}{DAFTAR ISI}
+\renewcommand{\listfigurename}{DAFTAR GAMBAR}
+\renewcommand{\listtablename}{DAFTAR TABEL}
+
+\usepackage[
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=blue,
+    hidelinks
+]{hyperref}
+
+% --------------------------------------------------
+% JUDUL DAFTAR ISI
+% --------------------------------------------------
+\renewcommand{\contentsname}{DAFTAR ISI}
+
+\renewcommand{\cfttoctitlefont}{%
+    \fontsize{14pt}{16pt}\selectfont
+    \bfseries
+}
+
+\renewcommand{\cftaftertoctitle}{}
+
+% Tidak ada tambahan jarak dari margin atas
+\setlength{\cftbeforetoctitleskip}{0pt}
+
+% Jarak judul ke isi daftar isi
+\setlength{\cftaftertoctitleskip}{1\baselineskip}
+
+\makeatletter
+\renewcommand{\@cftmaketoctitle}{%
+    \vspace*{\cftbeforetoctitleskip}%
+    {%
+        \centering
+        \cfttoctitlefont
+        \contentsname
+        \cftaftertoctitle
+        \par
+    }%
+    \vspace{\cftaftertoctitleskip}%
+}
+\makeatother
+
+% Titik-titik pada BAB
+\renewcommand{\cftchapdotsep}{\cftdotsep}
+% Jarak antar BAB
+\setlength{\cftbeforechapskip}{0.6\baselineskip}
+% BAB mulai dari margin kiri
+\cftsetindents{chap}{0pt}{1.2em}
+% Section lebih masuk
+\cftsetindents{section}{1.2em}{2.2em}
+% Subsection lebih masuk lagi
+\cftsetindents{subsection}{3.6em}{2.5em}
+% Subsubsection lebih masuk lagi
+\cftsetindents{subsubsection}{7.2em}{4em}
+
+% --------------------------------------------------
+% JUDUL DAFTAR GAMBAR
+% --------------------------------------------------
+\renewcommand{\listfigurename}{DAFTAR GAMBAR}
+
+\renewcommand{\cftloftitlefont}{%
+    \fontsize{14pt}{16pt}\selectfont
+    \bfseries
+}
+
+\renewcommand{\cftafterloftitle}{}
+
+% Tidak ada tambahan jarak dari margin atas
+\setlength{\cftbeforeloftitleskip}{0pt}
+
+% Jarak judul ke isi daftar gambar
+\setlength{\cftafterloftitleskip}{1\baselineskip}
+
+\makeatletter
+\renewcommand{\@cftmakeloftitle}{%
+    \vspace*{\cftbeforeloftitleskip}%
+    {%
+        \centering
+        \cftloftitlefont
+        \listfigurename
+        \cftafterloftitle
+        \par
+    }%
+    \vspace{\cftafterloftitleskip}%
+}
+\makeatother
+
+% Nomor gambar dimulai dari margin kiri
+\setlength{\cftfigindent}{0pt}
+
+% Lebar area nomor gambar (misalnya 1.1, 2.10, dst.)
+\setlength{\cftfignumwidth}{2em}
+
+% --------------------------------------------------
+% JUDUL DAFTAR TABEL
+% --------------------------------------------------
+
+\renewcommand{\listtablename}{DAFTAR TABEL}
+
+\renewcommand{\cftlottitlefont}{%
+    \fontsize{14pt}{16pt}\selectfont
+    \bfseries
+}
+
+\renewcommand{\cftafterlottitle}{}
+
+% Tidak ada tambahan jarak dari margin atas
+\setlength{\cftbeforelottitleskip}{0pt}
+
+% Jarak judul ke isi daftar tabel
+\setlength{\cftafterlottitleskip}{1\baselineskip}
+
+\makeatletter
+\renewcommand{\@cftmakelottitle}{%
+    \vspace*{\cftbeforelottitleskip}%
+    {%
+        \centering
+        \cftlottitlefont
+        \listtablename
+        \cftafterlottitle
+        \par
+    }%
+    \vspace{\cftafterlottitleskip}%
+}
+\makeatother
+
+% Nomor gambar dimulai dari margin kiri
+\setlength{\cfttabindent}{0pt}
+
+% Lebar area nomor gambar (misalnya 1.1, 2.10, dst.)
+\setlength{\cfttabnumwidth}{2em}
+
+% ==================================================
+% FORMAT BAB, SUB-BAB, SUB-SUB-BAB DAN PARAGRAF
+% ==================================================
+
+\usepackage{titlesec}
+\usepackage{indentfirst}
+
+% --------------------------------------------------
+% PARAGRAF
+% --------------------------------------------------
+
+% Awal setiap paragraf masuk 1 tab = 1,5 cm
+\setlength{\parindent}{1.5cm}
+
+% Tidak ada jarak tambahan antarparagraf
+\setlength{\parskip}{0pt}
+
+
+% --------------------------------------------------
+% CHAPTER / BAB
+% Contoh:
+%
+%                 BAB 1
+%
+%              PENDAHULUAN
+% --------------------------------------------------
+
+\titleformat{\chapter}[display]
+    {\centering\fontsize{14pt}{16pt}\selectfont\bfseries}
+    {BAB \arabic{chapter}}
+    {0\baselineskip}       
+    {\MakeUppercase}
+
+\titlespacing{\chapter}
+    {0pt}                  % indent kiri
+    {0pt}                  % tepat pada batas margin atas
+    {2\baselineskip}                  % jarak berikutnya diatur oleh section
+
+
+% --------------------------------------------------
+% SECTION / SUB-BAB
+% Contoh:
+% 1.1 Latar Belakang
+% --------------------------------------------------
+
+\titleformat{\section}[hang]
+    {\fontsize{12pt}{14pt}\selectfont\bfseries}
+    {\thesection}
+    {0.5em}
+    {}
+
+\titlespacing{\section}
+    {0pt}
+    {1.5\baselineskip}       % dari sebelumnya -> judul = 3 spasi / 2x Enter
+    {0.5\baselineskip}       % judul -> paragraf = 1,5 spasi / 1x Enter
+
+% --------------------------------------------------
+% SUBSECTION
+% Contoh:
+% 1.1.1 Penyakit Daun Jagung
+% --------------------------------------------------
+
+\titleformat{\subsection}[hang]
+    {\fontsize{12pt}{14pt}\selectfont\bfseries}
+    {\thesubsection}
+    {0.5em}
+    {}
+
+\titlespacing{\subsection}
+    {0pt}
+    {1.5\baselineskip}       % sebelum judul = 3 spasi
+    {0.5\baselineskip}       % setelah judul = 1,5 spasi
+
+
+% --------------------------------------------------
+% SUBSUBSECTION
+% Contoh:
+% 1.1.1.1 Northern Corn Leaf Blight
+% --------------------------------------------------
+
+\titleformat{\subsubsection}[hang]
+    {\fontsize{12pt}{14pt}\selectfont\bfseries}
+    {\thesubsubsection}
+    {0.5em}
+    {}
+
+\titlespacing{\subsubsection}
+    {0pt}
+    {1\baselineskip}       % sebelum judul = 3 spasi
+    {0.3\baselineskip}       % setelah judul = 1,5 spasi
+
+
+% --------------------------------------------------
+% KEDALAMAN PENOMORAN
+% --------------------------------------------------
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}

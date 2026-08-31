@@ -1,0 +1,93 @@
+% !TeX program = xelatex
+% yok bisa ==> disertasi nuril esti
+
+\documentclass[12pt,a4paper,twoside,openright,fleqn]{report}
+\usepackage{tocloft}
+
+% maksure kalo Penulisan rumus dimulai pada batas kiri, krn defalkut e wes rata kiri tapi ada space dikit
+\setlength{\mathindent}{0pt}
+% ============================================================
+% PILIH MODE DOKUMEN
+% ============================================================
+% Pilih salah satu:
+% \proposaltrue  = Proposal Disertasi
+% \proposalfalse = Buku Disertasi
+
+\newif\ifproposal
+\proposalfalse
+
+
+\input{data-dokumen}
+\input{settingan/preambles}
+
+\begin{document}
+
+% ============================================================
+% BAGIAN DEPAN: nomor halaman Romawi i, ii, iii ...
+% ============================================================
+% Mulai penomoran halaman dari sampul
+\pagenumbering{roman}
+
+
+\input{isinya/1-umum/sampul}
+
+\input{isinya/1-umum/halaman-judul}
+\input{isinya/1-umum/halaman-kosong}
+
+\ifproposal
+    % kode kalau mode PROPOSAL
+    \input{isinya/2-proposal/lembar-pengesahan-proposal}
+    \input{isinya/1-umum/halaman-kosong}
+\else
+    % kode kalau mode DISERTASI
+\fi
+
+\input{isinya/2-proposal/abstrak}
+\input{isinya/1-umum/halaman-kosong}
+
+\input{isinya/2-proposal/abstrak-EN}
+\input{isinya/1-umum/halaman-kosong}
+
+\input{isinya/1-umum/daftar-isi}
+% \input{isinya/1-umum/halaman-kosong}
+
+\input{isinya/1-umum/daftar-gambar}
+\input{isinya/1-umum/halaman-kosong}
+
+\input{isinya/1-umum/daftar-tabel}
+\input{isinya/1-umum/halaman-kosong}
+
+
+
+\cleardoublepage
+
+% ============================================================
+% BAGIAN UTAMA: nomor halaman Arab 1, 2, 3, ...
+% ============================================================
+\pagenumbering{arabic}
+
+% BAB 1
+\input{isinya/2-proposal/bab1}
+\input{isinya/1-umum/halaman-kosong}
+
+% BAB 2
+\input{isinya/2-proposal/bab2}
+\input{isinya/1-umum/halaman-kosong}
+
+% BAB 3
+\input{isinya/2-proposal/bab3}
+\input{isinya/1-umum/halaman-kosong}
+
+\chapter*{DAFTAR PUSTAKA}
+\addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
+
+\begingroup
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=2em
+
+\printbibliography[heading=none]
+
+\endgroup
+
+\end{document}

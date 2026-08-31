@@ -1,0 +1,142 @@
+% =========================================================
+% COVER DISERTASI
+% =========================================================
+
+
+\begin{titlepage}
+\addcontentsline{toc}{chapter}{HALAMAN JUDUL}
+
+\begin{tikzpicture}[remember picture,overlay]
+\definecolor{ITSBlue}{RGB}{0,0,255}
+\definecolor{FacultyColor}{RGB}{255,215,0}
+
+
+
+% =========================================================
+% GARIS BIRU ITS
+% =========================================================
+
+
+    \begin{scope}[
+    shift={(current page.north west)},
+    x={(1mm,0)},
+    y={(0,-1mm)}
+]
+
+    % Garis biru: 55--60 mm dari atas
+    \fill[ITSBlue]
+        (0,60)
+        rectangle
+        (210,65);
+
+    % % Blok kuning: mulai 60 mm dari atas
+    % \fill[FacultyColor]
+    %     (0,65)
+    %     rectangle
+    %     (210,297);
+
+\end{scope}
+
+% =========================================================
+% LOGO ITS
+%
+% 40 mm dari kiri
+% 20 mm dari atas
+% tinggi = 35 mm
+% =========================================================
+
+\node[
+    anchor=north west,
+    inner sep=0pt,
+    xshift=40mm,
+    yshift=-20mm
+]
+at (current page.north west)
+{
+    \includegraphics[
+        height=35mm
+    ]{gambar/logo_ITS.jpg}
+};
+
+
+% =========================================================
+% JUDUL
+% =========================================================
+
+\node[
+    anchor=south west,
+    inner sep=0pt,
+    xshift=40mm,
+    yshift=210mm
+]
+at (current page.south west)
+{
+    \parbox{155mm}{
+        \CoverFont        
+        \bfseries
+        \fontsize{12pt}{14pt}\selectfont
+        \raggedright
+
+        \varJenisDokumen  ~- \varKodeMK
+    }
+};
+
+\node[
+    anchor=south west,
+    inner sep=0pt,
+    xshift=40mm,
+    yshift=180mm
+]
+at (current page.south west)
+{
+    \parbox{155mm}{
+        \CoverFont
+        \fontsize{18pt}{20pt}\selectfont
+        \raggedright
+
+        \MakeUppercase{\varJudulID}
+    }
+};
+
+
+% =========================================================
+% TEKS BAWAH
+% jarak bawah = 3cm dari tepi
+% jarak kiri = 4cm dari tepi
+% =========================================================
+
+\node[
+    anchor=south west,
+    inner sep=0pt,
+    xshift=40mm,
+    yshift=30mm
+]
+at (current page.south west)
+{
+    \parbox{155mm}{
+        \CoverFont
+        \fontsize{12pt}{14pt}\selectfont
+        \raggedright
+
+        \varMhsNama\\
+        \varMhsNrp\\[40pt]
+
+        \varTeksPromotor\\
+        \varPromotorSatu\\
+        \varPromotorDua\\[40pt]
+
+        \MakeUppercase{\varDoktor}\\
+        \MakeUppercase{\varBidangKeahlian}\\
+        \MakeUppercase{\varJurusan}\\
+        \MakeUppercase{\varFakultas}\\
+        \MakeUppercase{\varKampus}\\
+        \MakeUppercase{\varKota}\\
+        \varTahun
+    }
+};
+
+
+\end{tikzpicture}
+
+\null
+\end{titlepage}

@@ -1,0 +1,351 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{neuman1980adjoint}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5e94b0101aa70d879d2fbf25c090e038}{%
+           family={Neuman},
+           familyi={N\bibinitperiod},
+           given={S.\bibnamedelimi P.},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \true{moreeditor}
+      \name{editor}{1}{}{%
+        {{hash=1b7ed333ce968faf09e6736ffaca15d3}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={S.\bibnamedelimi Y.},
+           giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Mississippi}%
+      }
+      \list{organization}{1}{%
+        {University of Mississippi}%
+      }
+      \strng{namehash}{5e94b0101aa70d879d2fbf25c090e038}
+      \strng{fullhash}{5e94b0101aa70d879d2fbf25c090e038}
+      \strng{fullhashraw}{5e94b0101aa70d879d2fbf25c090e038}
+      \strng{bibnamehash}{5e94b0101aa70d879d2fbf25c090e038}
+      \strng{authorbibnamehash}{5e94b0101aa70d879d2fbf25c090e038}
+      \strng{authornamehash}{5e94b0101aa70d879d2fbf25c090e038}
+      \strng{authorfullhash}{5e94b0101aa70d879d2fbf25c090e038}
+      \strng{authorfullhashraw}{5e94b0101aa70d879d2fbf25c090e038}
+      \strng{editorbibnamehash}{3ccb1a9dda84c97425fb834406347afc}
+      \strng{editornamehash}{3ccb1a9dda84c97425fb834406347afc}
+      \strng{editorfullhash}{3ccb1a9dda84c97425fb834406347afc}
+      \strng{editorfullhashraw}{3ccb1a9dda84c97425fb834406347afc}
+      \field{extraname}{1}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Proceedings of Third International Conference on Finite Elements in Water Resources}}
+      \field{title}{{Adjoint-State Finite Element Equations for Parameter Estimation}}
+      \field{year}{1980}
+      \field{pages}{189\bibrangedash 215}
+      \range{pages}{27}
+    \endentry
+    \entry{neuman1980}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2dfe1f8a6d62e05330f9d2c26274e7a5}{%
+           family={Neuman},
+           familyi={N\bibinitperiod},
+           given={Shlomo\bibnamedelima P.},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2dfe1f8a6d62e05330f9d2c26274e7a5}
+      \strng{fullhash}{2dfe1f8a6d62e05330f9d2c26274e7a5}
+      \strng{fullhashraw}{2dfe1f8a6d62e05330f9d2c26274e7a5}
+      \strng{bibnamehash}{2dfe1f8a6d62e05330f9d2c26274e7a5}
+      \strng{authorbibnamehash}{2dfe1f8a6d62e05330f9d2c26274e7a5}
+      \strng{authornamehash}{2dfe1f8a6d62e05330f9d2c26274e7a5}
+      \strng{authorfullhash}{2dfe1f8a6d62e05330f9d2c26274e7a5}
+      \strng{authorfullhashraw}{2dfe1f8a6d62e05330f9d2c26274e7a5}
+      \field{extraname}{2}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Water Resources Research}
+      \field{number}{2}
+      \field{title}{A Statistical Approach to the Inverse Problem of Aquifer Hydrology, Improved Solution Method and Added Perspective}
+      \field{volume}{16}
+      \field{year}{1980}
+      \field{pages}{331\bibrangedash 346}
+      \range{pages}{16}
+    \endentry
+    \entry{santoso2023unet}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2ddb9f2775ebead0f1f8db08dfee383f}{%
+           family={Santoso},
+           familyi={S\bibinitperiod},
+           given={Budi},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{fullhash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{fullhashraw}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{bibnamehash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{authorbibnamehash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{authornamehash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{authorfullhash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{authorfullhashraw}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Intelligent Agriculture}
+      \field{number}{4}
+      \field{title}{U-Net-Based Segmentation for Plant Leaf Images}
+      \field{volume}{7}
+      \field{year}{2023}
+      \field{pages}{50\bibrangedash 62}
+      \range{pages}{13}
+    \endentry
+    \entry{santoso2024deep}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2ddb9f2775ebead0f1f8db08dfee383f}{%
+           family={Santoso},
+           familyi={S\bibinitperiod},
+           given={Budi},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{fullhash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{fullhashraw}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{bibnamehash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{authorbibnamehash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{authornamehash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{authorfullhash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{authorfullhashraw}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Agricultural Technology}
+      \field{number}{1}
+      \field{title}{Deep Learning for Plant Disease Detection}
+      \field{volume}{10}
+      \field{year}{2024}
+      \field{pages}{10\bibrangedash 20}
+      \range{pages}{11}
+    \endentry
+    \entry{santoso2024lightweight}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2ddb9f2775ebead0f1f8db08dfee383f}{%
+           family={Santoso},
+           familyi={S\bibinitperiod},
+           given={Budi},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{fullhash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{fullhashraw}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{bibnamehash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{authorbibnamehash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{authornamehash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{authorfullhash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{authorfullhashraw}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \field{extraname}{3}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computers in Agriculture}
+      \field{number}{3}
+      \field{title}{Lightweight Neural Networks for Leaf Disease Segmentation}
+      \field{volume}{15}
+      \field{year}{2024}
+      \field{pages}{100\bibrangedash 115}
+      \range{pages}{16}
+    \endentry
+    \entry{santoso2024semantic}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2ddb9f2775ebead0f1f8db08dfee383f}{%
+           family={Santoso},
+           familyi={S\bibinitperiod},
+           given={Budi},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{fullhash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{fullhashraw}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{bibnamehash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{authorbibnamehash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{authornamehash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{authorfullhash}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \strng{authorfullhashraw}{2ddb9f2775ebead0f1f8db08dfee383f}
+      \field{extraname}{4}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Computer Vision Agriculture}
+      \field{number}{2}
+      \field{title}{Semantic Segmentation of Diseased Leaves Using U-Net}
+      \field{volume}{8}
+      \field{year}{2024}
+      \field{pages}{30\bibrangedash 42}
+      \range{pages}{13}
+    \endentry
+    \entry{siregar2006}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=383c32412f660919cd53bb7bd429233b}{%
+           family={Siregar},
+           familyi={S\bibinitperiod},
+           given={Ahmad},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ddb9f2775ebead0f1f8db08dfee383f}{%
+           family={Santoso},
+           familyi={S\bibinitperiod},
+           given={Budi},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6eadee75f4ad69cc81b564c20de74853}{%
+           family={Wijaya},
+           familyi={W\bibinitperiod},
+           given={Candra},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{dcf9ef1f7ac37d58dd185ada7cfd8152}
+      \strng{fullhash}{921409c69f63eb0cb940b9f8eaa70ba5}
+      \strng{fullhashraw}{921409c69f63eb0cb940b9f8eaa70ba5}
+      \strng{bibnamehash}{921409c69f63eb0cb940b9f8eaa70ba5}
+      \strng{authorbibnamehash}{921409c69f63eb0cb940b9f8eaa70ba5}
+      \strng{authornamehash}{dcf9ef1f7ac37d58dd185ada7cfd8152}
+      \strng{authorfullhash}{921409c69f63eb0cb940b9f8eaa70ba5}
+      \strng{authorfullhashraw}{921409c69f63eb0cb940b9f8eaa70ba5}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Jurnal Contoh}
+      \field{number}{2}
+      \field{title}{Judul Artikel Contoh}
+      \field{volume}{10}
+      \field{year}{2006}
+      \field{pages}{100\bibrangedash 110}
+      \range{pages}{11}
+    \endentry
+    \entry{todd2005groundwater}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e5ab4fcd653a4436da08b704bb77da5c}{%
+           family={Todd},
+           familyi={T\bibinitperiod},
+           given={David\bibnamedelima Keith},
+           giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7f93aea2a445b261656178a8dc2a1e3e}{%
+           family={Mays},
+           familyi={M\bibinitperiod},
+           given={Larry\bibnamedelima W.},
+           giveni={L\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons, Inc.}%
+      }
+      \strng{namehash}{e7ec16c86a068148413fe2465e806fbf}
+      \strng{fullhash}{e7ec16c86a068148413fe2465e806fbf}
+      \strng{fullhashraw}{e7ec16c86a068148413fe2465e806fbf}
+      \strng{bibnamehash}{e7ec16c86a068148413fe2465e806fbf}
+      \strng{authorbibnamehash}{e7ec16c86a068148413fe2465e806fbf}
+      \strng{authornamehash}{e7ec16c86a068148413fe2465e806fbf}
+      \strng{authorfullhash}{e7ec16c86a068148413fe2465e806fbf}
+      \strng{authorfullhashraw}{e7ec16c86a068148413fe2465e806fbf}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{title}{Groundwater Hydrology}
+      \field{year}{2005}
+    \endentry
+    \entry{wijaya2024cnn}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a599d9f27d6496db18cecab32f3ccc1b}{%
+           family={Wijaya},
+           familyi={W\bibinitperiod},
+           given={Andi},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a599d9f27d6496db18cecab32f3ccc1b}
+      \strng{fullhash}{a599d9f27d6496db18cecab32f3ccc1b}
+      \strng{fullhashraw}{a599d9f27d6496db18cecab32f3ccc1b}
+      \strng{bibnamehash}{a599d9f27d6496db18cecab32f3ccc1b}
+      \strng{authorbibnamehash}{a599d9f27d6496db18cecab32f3ccc1b}
+      \strng{authornamehash}{a599d9f27d6496db18cecab32f3ccc1b}
+      \strng{authorfullhash}{a599d9f27d6496db18cecab32f3ccc1b}
+      \strng{authorfullhashraw}{a599d9f27d6496db18cecab32f3ccc1b}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Indonesian Journal of Computer Science}
+      \field{number}{1}
+      \field{title}{CNN-Based Classification of Corn Leaf Disease}
+      \field{volume}{12}
+      \field{year}{2024}
+      \field{pages}{70\bibrangedash 80}
+      \range{pages}{11}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
