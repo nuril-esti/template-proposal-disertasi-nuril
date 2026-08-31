@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.10.18)  31 AUG 2026 09:36
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.10.18)  31 AUG 2026 10:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/nuril/My Drive/_Sekolah S3/4. TULIS MENULIS/template-proposal-nuril/main"
-(/Users/nuril/My Drive/_Sekolah S3/4. TULIS MENULIS/template-proposal-nuril/main.tex
+**/Users/nuril/Documents/GitHub/template-proposal-disertasi-nuril/main
+(/Users/nuril/Documents/GitHub/template-proposal-disertasi-nuril/main.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/report.cls
@@ -1352,11 +1352,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  38849 strings out of 473832
- 762432 string characters out of 5729480
+ 762399 string characters out of 5729480
  1729745 words of memory out of 5000000
  61347 multiletter control sequences out of 15000+600000
  560575 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 107i,10n,110p,766b,4961s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,10n,110p,753b,4961s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on main.pdf (32 pages).
